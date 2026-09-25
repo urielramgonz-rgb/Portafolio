@@ -29,9 +29,29 @@ public class Recursividad {
 	}
 }
 
+	public static int sumaRecursiva(int[] datos, int longitud) {
+
+	if (longitud < 0) 
+	{
+		return 0;
+
+	}
+	else
+	{
+	
+	System.out.print(datos[longitud] + " + " );
+	
+	return datos[longitud] + sumaRecursiva(datos, longitud - 1);
+	
+		}
+	}
+
 	public static void main (String[] args ){
 		//saludo(10, "Uriel");
-		cuentaRegresiva(100);
+		//cuentaRegresiva(100);
+		int[] datos = {1,2,3,4};
+		System.out.print(" = " + sumaRecursiva(datos, datos.length-1));
+
 
 	}
 
